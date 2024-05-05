@@ -13,7 +13,7 @@ public class NobrokerApplication {
 	}
 
 	@Bean
-	public ModelMapper modelMaper(){
+	public ModelMapper modelMapper(){
 		return new ModelMapper();
 	}
 

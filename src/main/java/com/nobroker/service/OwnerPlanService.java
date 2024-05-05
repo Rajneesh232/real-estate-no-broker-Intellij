@@ -6,8 +6,8 @@ import java.util.List;
 
 public interface OwnerPlanService {
 
-    public OwnerPlanDto createOwnerPlan(OwnerPlanDto ownerPlanDto);
+    OwnerPlanDto createOwnerPlan(OwnerPlanDto ownerPlanDto);
 
-    public List<OwnerPlanDto> getAllOwnerPlan();
+    List<OwnerPlanDto> getAllOwnerPlan();
 
 }
