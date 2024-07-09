@@ -20,8 +20,9 @@ public class OwnerPlanServiceImpl implements OwnerPlanService {
     @Autowired
     private ModelMapper modelMapper;
 
-    public OwnerPlanServiceImpl(OwnerPlanRepository ownerPlanRepository) {
+    public OwnerPlanServiceImpl(OwnerPlanRepository ownerPlanRepository, ModelMapper modelMapper) {
         this.ownerPlanRepository = ownerPlanRepository;
+        this.modelMapper = modelMapper;
     }
 
     @Override
@@ -48,7 +49,7 @@ public class OwnerPlanServiceImpl implements OwnerPlanService {
     }
 
     OwnerPlanDto mapToDto(OwnerPlan ownerPlan){
-        OwnerPlanDto dto= modelMapper.map(ownerPlan,OwnerPlanDto.class);
-        return dto;
+        OwnerPlanDto OwnerPlandto= modelMapper.map(ownerPlan,OwnerPlanDto.class);
+        return OwnerPlandto;
     }
 }

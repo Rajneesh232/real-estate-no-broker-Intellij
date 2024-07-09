@@ -11,10 +11,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserServiceImpl implements UserService {
   @Autowired
-  UserRepository userRepository;
+  private UserRepository userRepository;
 
   @Autowired
-  ModelMapper modelMapper;
+  private ModelMapper modelMapper;
     @Override
     public long createUser(UserDto userDto) {
         User user = mapToEntity(userDto);
